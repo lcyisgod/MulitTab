@@ -20,6 +20,8 @@
 		E2B27CA120C0E4720081EF5F /* MultiView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B27CA020C0E4720081EF5F /* MultiView.m */; };
 		E2B27CA420C0E4830081EF5F /* MultiTop.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B27CA320C0E4830081EF5F /* MultiTop.m */; };
 		E2B27CA720C0E4AD0081EF5F /* MultiScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B27CA620C0E4AD0081EF5F /* MultiScroller.m */; };
+		E2B4162021142C6F006B40B0 /* DateOperaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B4161F21142C6F006B40B0 /* DateOperaViewController.m */; };
+		E2B4162221142F50006B40B0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B4162121142F50006B40B0 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,9 @@
 		E2B27CA320C0E4830081EF5F /* MultiTop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiTop.m; sourceTree = "<group>"; };
 		E2B27CA520C0E4AD0081EF5F /* MultiScroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiScroller.h; sourceTree = "<group>"; };
 		E2B27CA620C0E4AD0081EF5F /* MultiScroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiScroller.m; sourceTree = "<group>"; };
+		E2B4161E21142C6F006B40B0 /* DateOperaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateOperaViewController.h; sourceTree = "<group>"; };
+		E2B4161F21142C6F006B40B0 /* DateOperaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateOperaViewController.m; sourceTree = "<group>"; };
+		E2B4162121142F50006B40B0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B4162221142F50006B40B0 /* libsqlite3.0.tbd in Frameworks */,
 				4D31E1B8FAD170D24962BE70 /* libPods-MultiView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +115,8 @@
 				E2B27C8A20C0E43A0081EF5F /* AppDelegate.m */,
 				E2B27C8C20C0E43A0081EF5F /* ViewController.h */,
 				E2B27C8D20C0E43A0081EF5F /* ViewController.m */,
+				E2B4161E21142C6F006B40B0 /* DateOperaViewController.h */,
+				E2B4161F21142C6F006B40B0 /* DateOperaViewController.m */,
 				E24C8AEC20C11C2100934FE4 /* Person.h */,
 				E24C8AED20C11C2100934FE4 /* Person.m */,
 				E24C8AF220C11E4B00934FE4 /* TestCell.h */,
@@ -126,6 +134,7 @@
 		E8141B5EA43B542661B3C1DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2B4162121142F50006B40B0 /* libsqlite3.0.tbd */,
 				19F6A950CCAAD13226862DB0 /* libPods-MultiView.a */,
 			);
 			name = Frameworks;
@@ -142,6 +151,7 @@
 				E2B27C8220C0E43A0081EF5F /* Sources */,
 				E2B27C8320C0E43A0081EF5F /* Frameworks */,
 				E2B27C8420C0E43A0081EF5F /* Resources */,
+				C0755E54B9CEE8540438F262 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +227,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0755E54B9CEE8540438F262 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MultiView/Pods-MultiView-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultiView/Pods-MultiView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -227,6 +255,7 @@
 				E2B27CA120C0E4720081EF5F /* MultiView.m in Sources */,
 				E2B27C8E20C0E43A0081EF5F /* ViewController.m in Sources */,
 				E24C8AEE20C11C2100934FE4 /* Person.m in Sources */,
+				E2B4162021142C6F006B40B0 /* DateOperaViewController.m in Sources */,
 				E2B27CA420C0E4830081EF5F /* MultiTop.m in Sources */,
 				E2B27C9920C0E43C0081EF5F /* main.m in Sources */,
 				E24C8AF520C11E4B00934FE4 /* TestCell.m in Sources */,

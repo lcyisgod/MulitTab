@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import "MultiView.h"
 #import "Person.h"
+#import "DateOperaViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) NSArray *titleAry;
@@ -51,7 +52,9 @@
 }
 
 -(void)upload {
-    [_multView upDataContent:_dataAry indext:-1];
+//    [_multView upDataContent:_dataAry indext:-1];
+    DateOperaViewController *operVC = [[DateOperaViewController alloc] init];
+    [self.navigationController pushViewController:operVC animated:YES];
 }
 
 -(MultiView *)multView {
